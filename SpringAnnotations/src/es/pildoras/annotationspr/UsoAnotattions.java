@@ -8,11 +8,9 @@ public class UsoAnotattions {
 		// TODO Auto-generated method stub
 		
 		
-		//<!-- VIDEO 16 -->
-		//<!-- 1 Se prepara Spring para que por medio de la recursividad lea las anotaciones dadas en el paquete indicado -->
-		//<!-- 2 Se agregan las anotaciones en este caso "@Component("ComercialExperimentadopr")" -->
-		//<!-- 3 Se pide el bean -->
-		
+		//<!-- VIDEO 17 INYECCION EN EL CONSTRUCTORI CON AUTOWIRED-->
+		//<!--  NO SE TOCA ESTA CLASE-->
+	
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("appContexto.xml");
 		
 		Empleados pr = contexto.getBean("ComercialExperimentadopr", Empleados.class);
