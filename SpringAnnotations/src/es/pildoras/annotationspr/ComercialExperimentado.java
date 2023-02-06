@@ -17,6 +17,9 @@ import org.springframework.stereotype.Component;
 	//<!-- 3 Se agregan las anotaciones "@Component" en "class InformeFinancieroTrim1" y "@Autowired" en el constructor y se llama 
 	//		en el metodo getInforme() por medio de "informeFinanciero.getInformeFinanciero()" los metodos de la clase inyectada  -->
 
+//<!-- VIDEO 18 INYECCION EN EL CONSTRUCTORI CON AUTOWIRED-->
+//<!-- 1 Si la clase solo tiene un constructor no es necesario el "@Autowired" -->
+
 @Component("ComercialExperimentadopr")
 public class ComercialExperimentado implements Empleados {
 	
