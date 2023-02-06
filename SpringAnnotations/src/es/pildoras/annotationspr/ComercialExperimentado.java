@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 
 
-
 //<!-- 	VIDEO 16 -->
 //<!-- 	1 Se prepara Spring para que por medio de la recursividad lea las anotaciones dadas en el paquete indicado -->
 //<!-- 	2 Se agregan las anotaciones en este caso "@Component("ComercialExperimentadopr")"  -->
@@ -20,24 +19,48 @@ import org.springframework.stereotype.Component;
 //<!-- VIDEO 18 INYECCION EN EL CONSTRUCTORI CON AUTOWIRED-->
 //<!-- 1 Si la clase solo tiene un constructor no es necesario el "@Autowired" -->
 
+
+//<!-- VIDEO 19 INYECCION EN EL CONSTRUCTORI CON AUTOWIRED-->
+//<!-- 1 Se puede hacer una inyeccion usando un constructor/ un Setter / o cualquiera // y un campo de clase con "@Autowired" -->
+
 @Component("ComercialExperimentadopr")
 public class ComercialExperimentado implements Empleados {
-	
+	//constructor a inyectar  con un Campo de Clase --> 
+	@Autowired
 	private CreacionInformeFinanciero informeFinanciero;
 	
 	
-	//constructor a inyectar -->
-	@Autowired
-	public ComercialExperimentado(CreacionInformeFinanciero informeFinanciero) {
-		super();
-		this.informeFinanciero = informeFinanciero;
-	}
+	//constructor a inyectar  con un Setter -->
+	/////////////////////////////////////////////////////////
+//	@Autowired
+//	public void setInformeFinanciero(CreacionInformeFinanciero informeFinanciero) {
+//		this.informeFinanciero = informeFinanciero;
+//	}
+	/////////////////////////////////////////////////////////
+	
+	//constructor a inyectar  con un Metodo cualquiera --> 
+	
+//	@Autowired
+//
+//	public void probandoNombreDeMetodo(CreacionInformeFinanciero informeFinanciero) {
+//
+//		this.informeFinanciero = informeFinanciero;
+//
+//	}
+//	
+//	@Autowired
+//	public ComercialExperimentado(CreacionInformeFinanciero informeFinanciero) {
+//		super();
+//		this.informeFinanciero = informeFinanciero;
+//	}
 
 	@Override
 	public String getTareas() {
 		// TODO Auto-generated de method stub
 		return "vender y vender";
 	}
+
+	
 
 	@Override
 	public String getInforme() {
