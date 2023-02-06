@@ -8,7 +8,8 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
-	
+	<!-- 	VIDEO 16 -->
+	<!-- 	1 Se prepara Spring para que por medio de la recursividad lea las anotaciones dadas en el paquete indicado -->
 	<context:component-scan base-package="es.pildoras.annotationspr"></context:component-scan>
 	
 	
