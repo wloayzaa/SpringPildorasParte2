@@ -1,6 +1,7 @@
 package es.pildoras.annotationspr;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 
@@ -22,10 +23,14 @@ import org.springframework.stereotype.Component;
 
 //<!-- VIDEO 19 INYECCION EN EL CONSTRUCTORI CON AUTOWIRED-->
 //<!-- 1 Se puede hacer una inyeccion usando un constructor/ un Setter / o cualquiera // y un campo de clase con "@Autowired" -->
-
 @Component("ComercialExperimentadopr")
 public class ComercialExperimentado implements Empleados {
 	//constructor a inyectar  con un Campo de Clase --> 
+	
+	//<!-- VIDEO 20 @QUALIFIER especifica el ID del BEAN cuando es mas hay mas de una clase que implementan "CreacionInformeFinanciero"-->
+	//<!-- 1 Se puede hacer una inyeccion usando un constructor/ un Setter / o cualquiera // y un campo de clase con "@Autowired" -->
+	
+	@Qualifier("informeFinancieroTrim2")
 	@Autowired
 	private CreacionInformeFinanciero informeFinanciero;
 	
