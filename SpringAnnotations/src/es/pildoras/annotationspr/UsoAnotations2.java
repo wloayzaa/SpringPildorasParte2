@@ -6,7 +6,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class UsoAnotations2 {
 	
 	
-
+////////////////////SPRING PILDORAS CLASE 23//////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
