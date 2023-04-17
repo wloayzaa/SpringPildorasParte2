@@ -22,5 +22,8 @@ public class UsoAnotations2 {
 		
 		contexto2.close();
 	}
+	
+	ClassPathXmlApplicationContext contexto2 = new ClassPathXmlApplicationContext("appContexto.xml");
+
 
 }

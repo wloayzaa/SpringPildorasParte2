@@ -1,13 +1,17 @@
 package es.pildoras.annotationspr;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.PostMapping;
 
 //<!-- VIDEO 21 @SCOPE("prototype") hace que las instancias de los objetos tengan referencia de memoria diferentes -->
 	//<!-- 1 Spring por defecto esta en "singleton" aunque al imprimir la instancia sin @scope el lugar del HEAP es diferente que con @scope " -->
-@Scope("prototype")
+@Scope("singleton")
 @Component("ComercialExperimentadopr")
 public class ComercialExperimentado implements Empleados {
 	//constructor a inyectar  con un Campo de Clase --> 
@@ -43,6 +47,29 @@ public class ComercialExperimentado implements Empleados {
 //		super();
 //		this.informeFinanciero = informeFinanciero;
 //	}
+	
+
+/////////////////////SPRING PILDORAS CLASE 22/////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+	
+	
+	@PostConstruct
+	public void ejetutaDespuesDeCreacionDelBean () {
+		
+		System.out.println("Antes de instaciacion");
+		
+	}
+	
+	@PreDestroy
+	public void ejetutaAntesDeCreacionDelBean () {
+		
+		System.out.println("Despues de destruir bean ");
+		
+	}
+	
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+	
 
 	@Override
 	public String getTareas() {
