@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class UsoAnotations2 {
 	
 	
-////////////////////SPRING PILDORAS CLASE 23//////////////////////////////////////////
+////////////////////SPRING PILDORAS CLASE 24 //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
 	public static void main(String[] args) {
@@ -16,12 +16,11 @@ public class UsoAnotations2 {
 		
 		AnnotationConfigApplicationContext contexto2 = new AnnotationConfigApplicationContext(EmpleadosConfig.class);
 		
-		Empleados EmpleadoA = contexto2.getBean("ComercialExperimentadopr", Empleados.class);
-		Empleados EmpleadoB = contexto2.getBean("ComercialExperimentadopr", Empleados.class);
-		
-		System.out.println(EmpleadoA);
-		System.out.println(EmpleadoB);
-		
+		//Pedir un bean al contenedor
+		Empleados empleado = contexto2.getBean("directorFinanciero", Empleados.class);
+		System.out.println(empleado.getTareas());
+		System.out.println(empleado.getInforme());
+
 		contexto2.close();
 	}
 	
