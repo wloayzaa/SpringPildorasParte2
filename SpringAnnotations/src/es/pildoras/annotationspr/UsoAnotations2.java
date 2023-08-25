@@ -6,21 +6,23 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class UsoAnotations2 {
 	
 	
-////////////////////SPRING PILDORAS CLASE 24 //////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////
+
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		
 	//	ClassPathXmlApplicationContext contexto2 = new ClassPathXmlApplicationContext("appContexto.xml");
 		
+		//SPRING PILDORAS CLASE 25 
+
 		AnnotationConfigApplicationContext contexto2 = new AnnotationConfigApplicationContext(EmpleadosConfig.class);
 		
-		//Pedir un bean al contenedor
-		Empleados empleado = contexto2.getBean("directorFinanciero", Empleados.class);
-		System.out.println(empleado.getTareas());
-		System.out.println(empleado.getInforme());
-
+		//Se usa DirectorFinanciero ya que los metodos que se prentede leer solo pertenecen a director financiero y no a la interface que implementaba o sea empleados
+		//Esto hace que se deba cambiar el .class
+		
+		// Empleados empleado = contexto2.getBean("directorFinanciero", Empleados.class); 
+		DirectorFinanciero directorFinanciero = contexto2.getBean("directorFinanciero", DirectorFinanciero.class);
+		System.out.println("Este es el email del archivo 'datosEmpresas.propiedades' :" + directorFinanciero.getEmail());
 		contexto2.close();
 	}
 	
